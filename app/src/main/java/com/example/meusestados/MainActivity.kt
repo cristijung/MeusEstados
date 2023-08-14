@@ -35,12 +35,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MeusEstadosTheme {
-
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MyApp()
+                    MeusEstados()
                 }
             }
         }
@@ -48,7 +47,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MyApp() {
+fun MeusEstados() {
     var countState by remember { mutableStateOf(0) }
 
     Surface(
@@ -100,7 +99,7 @@ fun MyApp() {
 @Composable
 @Preview
 fun PreviewMyApp() {
-    MyApp()
+    MeusEstados()
 }
 
 
